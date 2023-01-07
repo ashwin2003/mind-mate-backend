@@ -9,6 +9,10 @@ const DisorderDetail = mongoose.Schema({
     type: String,
     required: true,
   },
+  description: {
+    type: String,
+    required: true,
+  },
   steps: [
     {
       name: {
@@ -21,6 +25,8 @@ const DisorderDetail = mongoose.Schema({
       },
     },
   ],
+  images: [{ type: String }],
+  symptoms: [{ type: String }],
 });
 
 module.exports = mongoose.model("DisorderDetail", DisorderDetail);
